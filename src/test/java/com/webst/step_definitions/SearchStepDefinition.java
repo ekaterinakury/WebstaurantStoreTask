@@ -71,11 +71,11 @@ public class SearchStepDefinition {
     @Then("User Empty Cart")
     public void user_empty_cart() {
 
-        // Click on the "Empty Cart" button and then the final confirmation button
+        // Click on the "Empty Cart" button and then the final confirmation button.
         actions.moveToElement(wmp.emptyCart).click().perform();
         actions.moveToElement(wmp.emptyCartFinal).click().perform();
 
-        // Assert that the cart is empty by verifying the displayed text
+        // Assert that the cart is empty by verifying the displayed text.
         Assert.assertEquals("ERROR: CART IS NOT EMPTY", wmp.emptyCartText.getText(), "Your cart is empty.");
 
     }
